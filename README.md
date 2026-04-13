@@ -28,8 +28,22 @@ A robust, console-based Java application for managing student records using pers
 - `students.dat`: The binary data store (Auto-generated).
 - `studentstext.txt`: The exported report (Generated on request).
 
+
 ## 📥 Installation & Usage
 
 1. **Clone the repository**:
    ```bash
    git clone [https://github.com/your-username/StdMSys.git](https://github.com/your-username/StdMSys.git)
+
+2. **Compile the project**:
+   ```bash
+   javac -d bin src/StdMSys/*.java
+
+3. **Run the application**:
+   ```bash
+   java -cp bin StdMSys.Main
+   
+## 🧠 Technical Highlights
+- `Efficiency`: The topper() method avoids the "Two-Pass" trap (reading the file twice). It updates a champion list in a single iteration, making it scalable for large datasets.
+
+- `Resource Management`: Implements try-with-resources throughout the application to guarantee file closure and prevent memory leaks.
